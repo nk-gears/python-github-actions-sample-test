@@ -24,11 +24,13 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
+        set -xe
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install paconn
         mkdir -p ~/.paconn
         echo $AZURE_TOKEN > ~/.paconn/accessTokens.json
+        cp act.txt ~/.paconn/accessTokens.json
         cat ~/.paconn/accessTokens.json
         ls ~/.paconn/
         pwd
