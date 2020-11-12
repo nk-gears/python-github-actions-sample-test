@@ -29,6 +29,8 @@ jobs:
         pip install paconn
         mkdir -p ~/.paconn
         echo $AZURE_TOKEN > ~/.paconn/accessTokens.json
+        cat ~/.paconn/accessTokens.json
+        ls ~/.paconn/
         pwd
         ls ~/
         paconn login
