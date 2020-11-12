@@ -27,7 +27,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install paconn
+        mkdir -p ~/.paconn
         echo $AZURE_TOKEN > ~/.paconn/accessTokens.json
+        pwd
+        ls ~/
+        paconn login
         cd dist
         paconn update -s settings.json
     - name: Lint with flake8
